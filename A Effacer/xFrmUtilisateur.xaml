@@ -1,0 +1,61 @@
+﻿<Window 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Name="FrmUtilisateur"
+    ResizeMode="CanResizeWithGrip"
+    Title="Utilisateur" Height="600" Width="1200"
+    SizeToContent = "WidthAndHeight" ShowInTaskbar = "True" >
+   <Grid>
+        <TabControl Name="TabGeneral" HorizontalAlignment="Left" Margin="10,-31,0,-88.667">
+            <TabItem Header="Général">
+                <Grid Background="#FFE5E5E5" Margin="0,3,354,0" Height="416" VerticalAlignment="Top">
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top"/>
+                    <Label Content="Prénom" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Initiales" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Nom" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Nom de connexion" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Nom complet" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Nom d'affichage" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="ID d'employé" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Description" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Bureau" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Numéro de téléphone" HorizontalAlignment="Left" Margin="10,295,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="E-mail" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Page Web" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+
+                    <TextBox Name="fUtil_Prenom" HorizontalAlignment="Left" Margin="100,25,0,0" VerticalAlignment="Top" Height="23" Width="268"/>
+                    <TextBox Name="fUtil_Initiales" HorizontalAlignment="Left" Margin="100,55,0,0" VerticalAlignment="Top" Height="23" Width="43"/>
+                    <TextBox Name="fUtil_Nom" HorizontalAlignment="Left" Margin="100,85,0,0" VerticalAlignment="Top" Height="23" Width="268"/>
+                    <TextBox Name="fUtil_Nomconx" HorizontalAlignment="Left" Margin="127,115,0,0" VerticalAlignment="Top" Height="23" Width="150"/>
+                    <TextBox Name="fUtil_NomComplet" HorizontalAlignment="Left" Margin="100,145,0,0" VerticalAlignment="Top" Height="23" Width="314"/>
+                    <TextBox Name="fUtil_NomAff" HorizontalAlignment="Left" Margin="127,175,0,0" VerticalAlignment="Top" Height="23" Width="287"/>
+                    <TextBox Name="fUtil_ID" HorizontalAlignment="Left" Margin="100,205,0,0" VerticalAlignment="Top" Height="23" Width="133"/>
+                    <TextBox Name="fUtil_Desc" HorizontalAlignment="Left" Margin="100,235,0,0" VerticalAlignment="Top" Height="23" Width="314"/>
+                    <TextBox Name="fUtil_Bureau" HorizontalAlignment="Left" Margin="100,265,0,0" VerticalAlignment="Top" Height="23" Width="201"/>
+                    <TextBox Name="fUtil_NumTel" HorizontalAlignment="Left" Margin="144,295,0,0" VerticalAlignment="Top" Height="23" Width="224"/>
+                    <TextBox Name="fUtil_Email" HorizontalAlignment="Left" Margin="100,325,0,0" VerticalAlignment="Top" Height="23" Width="268"/>
+                    <TextBox Name="fUtil_PageWeb" HorizontalAlignment="Left" Margin="100,355,0,0" VerticalAlignment="Top" Height="23" Width="133"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Compte">
+                <Grid Background="#FFE5E5E5" Margin="0,-37,0,233.333">
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="207" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="419"/>
+                    <Label Content="Prénom" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Initiales" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Nom" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Nom de connexion" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Nom complet" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Nom d'affichage" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="ID d'employé" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Description" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Bureau" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Numéro de téléphone" HorizontalAlignment="Left" Margin="10,295,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="E-mail" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                    <Label Content="Page Web" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Height="26" Width="133"/>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

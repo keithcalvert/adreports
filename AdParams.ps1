@@ -1,0 +1,1 @@
+$Global:Logo='c:\_scripts\logo\logo.jpg'

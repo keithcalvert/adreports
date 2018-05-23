@@ -7,7 +7,7 @@
     Height="600" Width="1200"
     SizeToContent = "WidthAndHeight"
     ShowInTaskbar = "True" >
-    <Grid>
+    <StackPanel>
         <TabControl Name="TabGeneral">
             <TabItem Header="Général">
             <Grid HorizontalAlignment="Left">
@@ -177,5 +177,5 @@
             </StackPanel.Resources>
             <Button Name="fUtil_btnQuit" Content="Quitter"/>
         </StackPanel>
-    </Grid>
+    </StackPanel>
 </Window>

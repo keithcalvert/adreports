@@ -29,7 +29,7 @@ Function AdOrdiRemplieFrm
 {Param 
     ($pOrdinateur)
     $mtxt = "Name -like '$pOrdinateur'"
-    $mOrdinateur =  Get-ADComputer -Filter "$mTxt" -properties * 
+    $mOrdinateur =  Get-ADComputer -Filter $mTxt -properties * 
 
     $fOrdi_Ordinateur.Text      = $mOrdinateur.Name
     $fOrdi_OS.Text              = $mOrdinateur.OperatingSystem

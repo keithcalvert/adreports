@@ -214,13 +214,12 @@ $fMain_BtnSelUtil.Add_Click({
 	{
 		1	{If ($fMain_LstOrdis.Items.Count -gt 0)
 				{		
-					$Global:AdOrdinateur = 1 #$lstUtils.SelectedItem
-					AdOrdiOuvrirFrm $fMain_LstOrdis.SelectedItem
-				}
+					$Global:AdOrdinateur = $fMain_LstOrdis.SelectedItem.oOrdi
+					AdOrdiOuvrirFrm 				}
 	}
 		2	{If ($fMain_LstUtils.Items.Count -gt 0)
 				{		
-					$Global:AdUtilisateur = 6 #$lstUtils.SelectedItem
+					$Global:AdUtilisateur = $lstUtils.SelectedItem.uId
 					AdUtilOuvrirFrm
 				}
 			}

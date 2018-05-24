@@ -17,7 +17,7 @@ Function AdOrdiOuvrirFrm
 
     $fOrdi.Title= Get_Header "Ordinateur"
 
-    AdOrdiRemplieFrm
+    AdOrdiRemplieFrm 
 
     $fOrdi_BtnQuit.Add_Click({
         $fOrdi.Close()
@@ -26,10 +26,9 @@ Function AdOrdiOuvrirFrm
     $fOrdi.ShowDialog()
 }
 Function AdOrdiRemplieFrm
-{Param 
-    ($pOrdinateur)
-    $mtxt = "Name -like '$pOrdinateur'"
-    $mOrdinateur =  Get-ADComputer -Filter $mTxt -properties * 
+{
+
+    $mOrdinateur =  Get-ADComputer "$Global:AdOrdinateur" -properties * 
 
     $fOrdi_Ordinateur.Text      = $mOrdinateur.Name
     $fOrdi_OS.Text              = $mOrdinateur.OperatingSystem
@@ -37,6 +36,5 @@ Function AdOrdiRemplieFrm
     $fOrdi_OSVer.Text           = $mOrdinateur.OperatingSystemVersion
     $fOrdi_Description.Text     = $mOrdinateur.Description
     $fOrdi_Location.Text        = $mOrdinateur.Location
-   
 
 }

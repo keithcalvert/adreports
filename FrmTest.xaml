@@ -5,192 +5,37 @@
     SizeToContent="WidthAndHeight"
     ShowInTaskbar = "True"
     Title="MainWindow" Height="600" Width="1200">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="c:\_Scripts\adreports\images\watermark.png"/>
-        </Grid.Background>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        <!-- Header -->
-
-        <!-- Controls -->
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="6" Orientation="Horizontal">
-            <Label Content="Domaine:" Height="26"/>
-            <TextBox Name="TxDomaine" Height="23" Width="122"/>
-            <Label Content="Ou:" Height="26"/>
-            <TextBox Name="TxOu" Height="23"  Width="380"/>
-            <Button Name="Test" Content="Test" />
-        </StackPanel>
-
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="6">
-
-        
-            <TabControl Name="TabCtr" Height="232"  VerticalAlignment="Top" Width="Auto">
-                <TabItem Header="Accueil">
-                    <Grid Background="#FFE5E5E5">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="26"/>
-                            <RowDefinition Height="26"/>
-                            <RowDefinition Height="26"/>
-                            <RowDefinition Height="26"/>
-                            <RowDefinition Height="26"/>
-                            <RowDefinition Height="26"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="320"/>
-                            <ColumnDefinition Width="50" />
-                            <ColumnDefinition Width="320"/>
-                            <ColumnDefinition Width="50" />
-                        </Grid.ColumnDefinitions>
-
-                        <StackPanel Grid.Row="0">
-                            <Label Content="Nombre d'Utilisateurs"/>
-                        </StackPanel>
-                        <StackPanel Grid.Row="0" Grid.Column="1">
-                            <Button Name="fMain_T1_TxAdUtilsNb"  Height="20" />
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="1">
-                            <Label Content="Utilisateurs inactifs"/>
-                        </StackPanel>
-                        <StackPanel Grid.Row="1" Grid.Column="1">
-                            <Button Name="fMain_T1_TxAdUtilsInactif" Height="20"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="2">
-                            <Label Content="Utilisateurs désactivés " />
-                        </StackPanel>
-                        <StackPanel Grid.Row="2" Grid.Column="1">
-                            <Button Name="fMain_T1_TxAdUtilsDesactif"  Height="20"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="3">
-                            <Label Content="Utilisateurs verrouillés" />
-                        </StackPanel>
-                        <StackPanel Grid.Row="3" Grid.Column="1">
-                            <Button Name="fMain_T1_TxAdUtilsVerouille"  Height="20" />
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="4">
-                            <Label Content="Utilisateurs dont le mot de passe est arrivé à expiration" />
-                        </StackPanel>
-                        <StackPanel Grid.Row="4" Grid.Column="1">
-                            <Button Name="fMain_T1_TxAdUtilsMdpExpire"   Height="20"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="5">
-                            <Label Content="Utilisateurs dont le mot de passe n'expire Jamais" />
-                        </StackPanel>
-                        <StackPanel Grid.Row="5" Grid.Column="1">
-                            <Button Name="fMain_T1_TxAdUtilsMdpJamaisxpire"   Height="20"/>
-                        </StackPanel>
-
-
-                        <StackPanel Grid.Row="0" Grid.Column="2">
-                            <Label Content="Nombre d'Ordinateurs" />
-                        </StackPanel>
-                        <StackPanel Grid.Row="0" Grid.Column="3">
-                            <Button Name="fMain_T1_TxAdOrdisNb"  Height="20" />
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="1" Grid.Column="2">
-                            <Label Content="Ordinateurs désactivés" />
-                        </StackPanel>
-                        <StackPanel Grid.Row="1" Grid.Column="3">
-                            <Button Name="fMain_T1_TxAdOrdisDesactif"  Height="20"/>
-                        </StackPanel>
-
-                    </Grid>
-                </TabItem>
-
-                <TabItem Header="Ordinateurs">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="26"/>
-                        </Grid.RowDefinitions>
-
-                    <ListView Name="fMain_lstOrdis" Grid.Row="0" >
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Ordinateur" Width="70" DisplayMemberBinding="{Binding oOrdi}" />
-                                <GridViewColumn Header="Actif" Width="40" DisplayMemberBinding="{Binding oActif}"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-                    </Grid>
-                </TabItem>
-
-                <TabItem Header="Utilisateurs">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions> 
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="400"/>
-                            <ColumnDefinition Width="20"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-
-                        <StackPanel Grid.Row="0" Grid.ColumnSpan="6">
-                            <DataGrid  Name="fMain_lstUtils">
-                                <DataGrid.Columns>
-                                    <DataGridTextColumn Binding="{Binding uID}"     Header="ID" Width="70"  />
-                                    <DataGridTextColumn Binding="{Binding uPrenom}" Header="Prenom" Width="100" />
-                                    <DataGridTextColumn Binding="{Binding uNom}"    Header="Nom" Width="250" />
-                                    <DataGridTextColumn Binding="{Binding uActif}"  Header="Actif" Width="40" />
-                                    <DataGridTextColumn Binding="{Binding uMdpExpired}" Header="Expiré" Width="45" />
-                                    <DataGridTextColumn Binding="{Binding uPeJ}"    Header="Jamais" Width="45" />
-                                </DataGrid.Columns>
-                            </DataGrid>
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="0" Grid.Column="2">
-                            <ComboBox Name="fMain_CmbSortie"  Width="60" SelectedIndex="0" IsEnabled="True">
-                                <ComboBoxItem >
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="C:\_Scripts\adreports\Images\iconxl.png" />
-                                        <TextBlock >Excel</TextBlock>
-                                    </StackPanel>
-                                </ComboBoxItem>
-
-                                <ComboBoxItem >
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="C:\_Scripts\adreports\Images\iconxl.png" />
-                                        <TextBlock >Html</TextBlock>
-                                    </StackPanel>
-                                </ComboBoxItem>
-
-                                <ComboBoxItem >
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="C:\_Scripts\adreports\Images\iconxl.png" />
-                                        <TextBlock >Csv</TextBlock>
-                                    </StackPanel>
-                                </ComboBoxItem>
-                            </ComboBox>
-                        </StackPanel>
-
-                    </Grid>
-                </TabItem>
-
-            </TabControl>
-           </StackPanel>
-
-        <StackPanel Grid.Row="3">
-            <ProgressBar HorizontalAlignment="Left" Height="17"  VerticalAlignment="Center" Width="622"/>
-        </StackPanel>
-    </Grid>
-</Window>
+        <Grid> 
+        <dxc:ChartControl> 
+            <dxc:ChartControl.Titles> 
+                <dxc:Title Content="My Title"/> 
+            </dxc:ChartControl.Titles> 
+            <dxc:ChartControl.CrosshairOptions> 
+                <dxc:CrosshairOptions ShowArgumentLabels="True" ShowValueLabels="True" ShowValueLine="True"/> 
+            </dxc:ChartControl.CrosshairOptions> 
+            <dxc:ChartControl.Legends> 
+                <dxc:Legend/> 
+            </dxc:ChartControl.Legends> 
+            <dxc:XYDiagram2D> 
+                <dxc:BarSideBySideSeries2D DisplayName="Series 1" LabelsVisibility="True"> 
+                    <dxc:BarSideBySideSeries2D.Model> 
+                        <dxc:Quasi3DBar2DModel/> 
+                    </dxc:BarSideBySideSeries2D.Model> 
+                    <dxc:SeriesPoint Argument="A" Value="1"/> 
+                    <dxc:SeriesPoint Argument="B" Value="2"/> 
+                    <dxc:SeriesPoint Argument="C" Value="3"/> 
+                    <dxc:SeriesPoint Argument="D" Value="4"/> 
+                </dxc:BarSideBySideSeries2D> 
+                <dxc:BarSideBySideSeries2D LabelsVisibility="True" DisplayName="Series 2"> 
+                    <dxc:BarSideBySideSeries2D.Model> 
+                        <dxc:Quasi3DBar2DModel/> 
+                    </dxc:BarSideBySideSeries2D.Model> 
+                    <dxc:SeriesPoint Argument="A" Value="4"/> 
+                    <dxc:SeriesPoint Argument="B" Value="3"/> 
+                    <dxc:SeriesPoint Argument="C" Value="2"/> 
+                    <dxc:SeriesPoint Argument="D" Value="1"/> 
+                </dxc:BarSideBySideSeries2D> 
+            </dxc:XYDiagram2D> 
+        </dxc:ChartControl> 
+    </Grid> 
+</Window> 

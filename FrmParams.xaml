@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿<Window 
+<Window 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Name="FrmParams"
@@ -67,73 +66,3 @@
         </StackPanel>
     </Grid>
 </Window>
-=======
-﻿<Window 
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Name="FrmParams"
-    Title="ADReports - Parametres"
-    SizeToContent = "WidthAndHeight" ShowInTaskbar = "True" >
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-
-        <Grid Grid.Row="0">
-            <Label Content="Societe" />
-        </Grid>
-        <Grid Grid.Row="1">
-            <Label Content="Pays"/>
-        </Grid>
-        <Grid Grid.Row="2">
-            <Label Content="Domaine"/>
-        </Grid>
-        <Grid Grid.Row="3">
-            <Label Content="Ou"/>
-        </Grid>
-        <Grid Grid.Row="4">
-            <Label Content="Expire dans x Jours"/>
-        </Grid>
-
-        <Grid Grid.Row="0" Grid.Column="1">
-            <TextBox Name="fParams_Societe" MinWidth="300"/>
-        </Grid>
-        <Grid Grid.Row="1" Grid.Column="1">
-            <TextBox Name="fParams_Pays" MinWidth="60" Width="60" HorizontalAlignment="Left"/>
-        </Grid>
-        <Grid Grid.Row="2" Grid.Column="1">
-            <TextBox Name="fParams_Domaine" MinWidth="120"/>
-        </Grid>
-        <Grid Grid.Row="3" Grid.Column="1">
-            <TextBox Name="fParams_Ou" MinWidth="300"/>
-        </Grid>
-        <Grid Grid.Row="4" Grid.Column="1">
-            <TextBox Name="fParams_Xpire" MinWidth="60" Width="60" HorizontalAlignment="Left"/>
-        </Grid>
-
-        <StackPanel  Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
-            <StackPanel.Resources>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Margin" Value="0,10,10,10"/>
-                </Style>
-            </StackPanel.Resources>
-            <Button Name="fParams_btnOk" Content="Ok"/>
-            <Button Name="fParams_btnCancel" Content="Cancel"/>
-            <Button Name="fParams_btnQuit" Content="Quitter"/>
-        </StackPanel>
-    </Grid>
-</Window>
->>>>>>> 8713df83f41947b1cfb8f404a1284f7f6ea94e33

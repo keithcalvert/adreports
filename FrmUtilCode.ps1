@@ -26,7 +26,8 @@ Function AdUtilOuvrirFrm
     $fUtil.ShowDialog()
 }
 Function AdUtilRemplieFrm
-{
+{Param 
+    ($pUtilisateur)
     $txt = $fMain_Lstutils.selecteditem.uPrenom
     $txt += $fMain_Lstutils.selecteditem.uInitiales
     $txt += $fMain_Lstutils.selecteditem.uNom

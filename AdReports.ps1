@@ -1,4 +1,4 @@
-<#	
+﻿<#	
 	.NOTES
 	===========================================================================
  	Created on:   	10/03/2018 10:04
@@ -14,15 +14,16 @@
 		Each screen/form has a xxxxxxCode.ps1 for it's specific actions
 		There are some ADxxx.ps1 files that contain common functions. 
 
+		With help from
 http://www.wpf-tutorial.com
 http://www.wpf-tutorial.com/datagrid-control/details-row/
 http://notscott.blogspot.fr/2015/09/snazzy-up-your-powershell-with-gui.html
 #>
 
 [string]$Global:scriptPath = split-path $SCRIPT:MyInvocation.MyCommand.Path -parent
-$Global:Test = $False
+$Global:Test = $false
 $Global:Societe = 'Griesser Fr'
-$Global:Domaine = 'domain.int'
+$Global:Domaine = 'domaine.int'
 $Global:Pays = 'Fr'
 $Global:Ou = ''
 $Global:AdParamsInactive = 90
@@ -43,7 +44,6 @@ Function Out_Html
 {
 	$fMain_lstUtils.SelectAll
 
-	$hash = @{}
 	#$fMain_lstUtils.Rows | $hash
 
 	$fMain_lstUtils.SelectAll()
@@ -100,7 +100,7 @@ Add-Type –assemblyName WindowsBase
 
 #Trouve parametres systeme (Si ils exist's. Sinon Appel Ecran de parametrage.
 if(![System.IO.File]::Exists("$Global:scriptPath\AdReports.xml")){
-	AdParamsOuvrirFrm
+	#AdParamsOuvrirFrm
 }
 
 <# Munge to remove what PowerShell doesn't like and cast as XML
@@ -165,6 +165,10 @@ $btnTest.Add_Click({
 })
 
 # Event Handlers - Utilisateurs
+	$fMain_MainMenu.Add_Click({
+        Write-Host 'test click'
+	})
+
 $fMain_T1_TxAdUtilsNb.Add_Click({
         $TabCtr.SelectedIndex = 2
 		SetAdUtilsType 'Nb'
@@ -214,12 +218,13 @@ $fMain_BtnSelUtil.Add_Click({
 	{
 		1	{If ($fMain_LstOrdis.Items.Count -gt 0)
 				{		
-					$Global:AdOrdinateur = $fMain_LstOrdis.SelectedItem.oOrdi
-					AdOrdiOuvrirFrm 				}
+					$Global:AdOrdinateur = 1 #$lstUtils.SelectedItem
+					AdOrdiOuvrirFrm $fMain_LstOrdis.SelectedItem
+				}
 	}
 		2	{If ($fMain_LstUtils.Items.Count -gt 0)
 				{		
-					$Global:AdUtilisateur = $lstUtils.SelectedItem.uId
+					$Global:AdUtilisateur = 6 #$lstUtils.SelectedItem
 					AdUtilOuvrirFrm
 				}
 			}

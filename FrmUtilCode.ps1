@@ -28,6 +28,8 @@ Function AdUtilOuvrirFrm
 Function AdUtilRemplieFrm
 {Param 
     ($pUtilisateur)
+
+	#get-aduser $Global:AdUtilisateur
     $txt = $fMain_Lstutils.selecteditem.uPrenom
     $txt += $fMain_Lstutils.selecteditem.uInitiales
     $txt += $fMain_Lstutils.selecteditem.uNom

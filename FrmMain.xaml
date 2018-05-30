@@ -44,7 +44,7 @@
                     <Button Name="btnTest" Content="Test" />
                 </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="3" Orientation="Horizontal">
-                    <Button Name="fMain_BtnSelUtil" Content="Select"/>
+                    <Button Name="fMain_BtnSelection" Content="Select"/>
                     <ComboBox Name="fMain_CmbSortie"  Width="60" SelectedIndex="0" IsEnabled="True">
                         <ComboBoxItem>
                             <StackPanel Orientation="Horizontal">

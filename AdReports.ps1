@@ -165,9 +165,9 @@ $btnTest.Add_Click({
 })
 
 # Event Handlers - Utilisateurs
-	$fMain_MainMenu.Add_Click({
-        Write-Host 'test click'
-	})
+#	$fMain_MainMenu.Add_Click({
+#        Write-Host 'test click'
+#	})
 
 $fMain_T1_TxAdUtilsNb.Add_Click({
         $TabCtr.SelectedIndex = 2
@@ -213,18 +213,18 @@ $fMain_T1_TxAdOrdisDesactif.Add_Click({
 		RemplieLstOrdis 
 	})
 
-$fMain_BtnSelUtil.Add_Click({
+$fMain_BtnSelection.Add_Click({
 	Switch ($TabCtr.SelectedIndex)
 	{
 		1	{If ($fMain_LstOrdis.Items.Count -gt 0)
 				{		
-					$Global:AdOrdinateur = 1 #$lstUtils.SelectedItem
-					AdOrdiOuvrirFrm $fMain_LstOrdis.SelectedItem
+					$Global:AdOrdinateur = $fMain_lstUtils.SelectedItem.oOrdi
+					AdOrdiOuvrirFrm 
 				}
 	}
 		2	{If ($fMain_LstUtils.Items.Count -gt 0)
 				{		
-					$Global:AdUtilisateur = 6 #$lstUtils.SelectedItem
+					$Global:AdUtilisateur = 6 #$fMain_lstUtils.SelectedItem
 					AdUtilOuvrirFrm
 				}
 			}

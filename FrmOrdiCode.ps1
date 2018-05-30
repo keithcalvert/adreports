@@ -26,11 +26,12 @@ Function AdOrdiOuvrirFrm
     $fOrdi.ShowDialog()
 }
 Function AdOrdiRemplieFrm
-{Param 
-    ($pOrdinateur)
-    $mtxt = "Name -like '$pOrdinateur'"
-    $mOrdinateur =  Get-ADComputer -Filter "$mTxt" -properties * 
+{
 
+	if ($test -eq $false)
+	{
+		$mOrdinateur =  Get-ADComputer $Global:AdOrdinateur -properties * 
+	}
     $fOrdi_Ordinateur.Text      = $mOrdinateur.Name
     $fOrdi_OS.Text              = $mOrdinateur.OperatingSystem
     $fOrdi_OSSp.Text            = $mOrdinateur.OperatingSystemServicePack

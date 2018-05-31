@@ -218,7 +218,7 @@ $fMain_BtnSelection.Add_Click({
 	{
 		1	{If ($fMain_LstOrdis.Items.Count -gt 0)
 				{		
-					$Global:AdOrdinateur = $fMain_lstUtils.SelectedItem.oOrdi
+					$Global:AdOrdinateur = $fMain_lstOrdis.SelectedItem.oOrdi
 					AdOrdiOuvrirFrm 
 				}
 	}

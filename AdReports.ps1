@@ -165,9 +165,14 @@ $btnTest.Add_Click({
 })
 
 # Event Handlers - Utilisateurs
-#	$fMain_MainMenu.Add_Click({
-#        Write-Host 'test click'
-#	})
+	$mnuParam.Add_Click({
+		Write-Host 'test click'
+		AdParamsOuvrirFrm
+	})
+	$mnuTest.Add_Click({
+		Write-Host 'test click'
+		AdTestOuvrirFrm
+	})
 
 $fMain_T1_TxAdUtilsNb.Add_Click({
         $TabCtr.SelectedIndex = 2

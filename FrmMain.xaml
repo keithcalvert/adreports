@@ -16,8 +16,8 @@
                             <MenuItem Command="ApplicationCommands.Close" Header="Exit" IsEnabled="True" />
                         </MenuItem>
                         <MenuItem Header="Stuff">
-                            <MenuItem Header="Parameters" IsEnabled="True"/>
-                            <MenuItem Header="Test Screen" IsEnabled="True" Command="Replace"/>
+                            <MenuItem Header="Parameters" IsEnabled="True" Name="mnuParam"/>
+                            <MenuItem Header="Test Screen" IsEnabled="True" Name="mnuTest"/>
                         </MenuItem>
                     </Menu>
 

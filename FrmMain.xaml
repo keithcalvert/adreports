@@ -41,7 +41,6 @@
                     <TextBox Name="fMain_Domaine" Height="23" Width="122"/>
                     <Label Content="Ou:" Height="26"/>
                     <TextBox Name="fMain_Ou" Height="23"  Width="380"/>
-                    <Button Name="btnTest" Content="Test" />
                 </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="3" Orientation="Horizontal">
                     <Button Name="fMain_BtnSelection" Content="Select"/>

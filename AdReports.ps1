@@ -160,10 +160,6 @@ $fMain_T1_TxAdUtilsMdpJamaisxpire.Content = AdUtilsCount('JamaisXpire')
 $fMain_T1_TxAdOrdisNb.Content 			= AdOrdisCount('Nb')
 $fMain_T1_TxAdOrdisDesactif.content 	= AdOrdisCount('Desactif')
 
-$btnTest.Add_Click({
-	AdParamsOuvrirFrm
-})
-
 # Event Handlers - Utilisateurs
 	$mnuParam.Add_Click({
 		Write-Host 'test click'

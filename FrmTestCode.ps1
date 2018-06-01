@@ -3,7 +3,6 @@ Function AdTestOuvrirFrm
     #----------------------------------------------------------------------------------------------------------------
     # Get the content from the XAML file for the Form Testisateur
     #----------------------------------------------------------------------------------------------------------------
-    $Fichxaml = "frmTestisateur.xaml"
     # Get the content from the XAML file
     $fTestXaml = [XML](Get-Content "$scriptPath\frmTest.xaml")
     # Create an object for the XML content

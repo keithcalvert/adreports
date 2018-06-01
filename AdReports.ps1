@@ -21,7 +21,7 @@ http://notscott.blogspot.fr/2015/09/snazzy-up-your-powershell-with-gui.html
 #>
 
 [string]$Global:scriptPath = split-path $SCRIPT:MyInvocation.MyCommand.Path -parent
-$Global:Test = $false
+$Global:Test = $true
 $Global:Societe = 'Griesser Fr'
 $Global:Domaine = 'domaine.int'
 $Global:Pays = 'Fr'
@@ -165,9 +165,14 @@ $btnTest.Add_Click({
 })
 
 # Event Handlers - Utilisateurs
-#	$fMain_MainMenu.Add_Click({
-#        Write-Host 'test click'
-#	})
+	$mnuParam.Add_Click({
+		Write-Host 'test click'
+		AdParamsOuvrirFrm
+	})
+	$mnuTest.Add_Click({
+		Write-Host 'test click'
+		AdTestOuvrirFrm
+	})
 
 $fMain_T1_TxAdUtilsNb.Add_Click({
         $TabCtr.SelectedIndex = 2

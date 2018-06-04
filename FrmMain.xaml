@@ -178,7 +178,7 @@
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
 
-                                    <Listview Name="fMain_lstUtils" Grid.Row="0" Height="336">
+                                    <ListView Name="fMain_lstUtils" Grid.Row="0" Height="336">
                                         <ListView.View>
                                             <GridView>
                                                 <GridViewColumn Header="ID" Width="70" DisplayMemberBinding="{Binding uID}"/>

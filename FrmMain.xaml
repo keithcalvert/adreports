@@ -176,31 +176,20 @@
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="400"/>
-                                    <ColumnDefinition Width="20"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-
-                                <StackPanel Grid.Row="0" Height="336" Grid.ColumnSpan="6">
-                                    <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" CanContentScroll="True">
-                                        <DataGrid  Name="fMain_lstUtils">
-                                            <DataGrid.Columns>
-                                                <DataGridTextColumn Binding="{Binding uID}"     Header="ID" Width="70"  />
-                                                <DataGridTextColumn Binding="{Binding uPrenom}" Header="Prenom" Width="100" />
-                                                <DataGridTextColumn Binding="{Binding uNom}"    Header="Nom" Width="250" />
-                                                <DataGridTextColumn Binding="{Binding uActif}"  Header="Actif" Width="40" />
-                                                <DataGridTextColumn Binding="{Binding uMdpExpired}" Header="Expiré" Width="45" />
-                                                <DataGridTextColumn Binding="{Binding uPeJ}"    Header="Jamais" Width="45" />
-                                            </DataGrid.Columns>
-                                        </DataGrid>
-                                    </ScrollViewer>
-                                </StackPanel>
-
+                                    <Listview Name="fMain_lstUtils" Grid.Row="0" Height="336">
+                                        <ListView.View>
+                                            <GridView>
+                                                <GridViewColumn Header="ID" Width="70" DisplayMemberBinding="{Binding uID}"/>
+                                                <GridViewColumn Header="Prenom" Width="100" DisplayMemberBinding="{Binding uPrenom}"/>
+                                                <GridViewColumn Header="Nom" Width="250" DisplayMemberBinding="{Binding uNom}"/>
+                                                <GridViewColumn Header="Actif" Width="40" DisplayMemberBinding="{Binding uActif}"/>
+                                                <GridViewColumn Header="Expiré" Width="45" DisplayMemberBinding="{Binding uMdpExpired}"/>
+                                                <GridViewColumn Header="Jamais" Width="45" DisplayMemberBinding="{Binding uPeJ}"/>
+                                            </GridView>
+                                        </ListView.View>
+                                    </ListView>
                             </Grid>
                         </TabItem>
 

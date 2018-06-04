@@ -21,7 +21,7 @@ http://notscott.blogspot.fr/2015/09/snazzy-up-your-powershell-with-gui.html
 #>
 
 [string]$Global:scriptPath = split-path $SCRIPT:MyInvocation.MyCommand.Path -parent
-$Global:Test = $true
+$Global:Test = $false
 $Global:Societe = 'Griesser Fr'
 $Global:Domaine = 'domaine.int'
 $Global:Pays = 'Fr'

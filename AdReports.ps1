@@ -38,7 +38,10 @@ $Global:Images = "$Global:scriptPath\Images"
 
 Function Out_Excel
 {
-	$fMain_lstUtils | Export-Excel "$global:Reports\Adreports.xlsx" –Show
+	$fMain_lstUtils.Rows |
+     select -expand DataBoundItem |
+     export-csv test.csv -NoType
+#	$fMain_lstUtils | Export-Excel "$global:Reports\Adreports.xlsx" –Show
 }
 Function Out_Html
 {
@@ -236,10 +239,10 @@ $fMain_BtnSelection.Add_Click({
 $fMain_CmbSortie.Add_SelectionChanged({
     #If (Add_SelectionChanged(.Items.Count -gt 0)
     #{
-		Out_Html
+#		Out_Html
 		Switch ($fMain_CmbSortie.text)
 		{
-#			'Excel' 	{Out_Excel}
+			'Excel' 	{Out_Excel}
 #			'Csv' 		{Out_Csv}
 			'Html' 		{Out_Html}
 		}

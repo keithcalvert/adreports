@@ -233,17 +233,17 @@ $fMain_BtnSelection.Add_Click({
 				}
 			}
 	}
-	
 })
 
 $fMain_CmbSortie.Add_SelectionChanged({
     #If (Add_SelectionChanged(.Items.Count -gt 0)
     #{
 #		Out_Html
+write-host $fMain_CmbSortie.sSelectedItem.Description
 		Switch ($fMain_CmbSortie.text)
 		{
 			'Excel' 	{Out_Excel}
-#			'Csv' 		{Out_Csv}
+			'Csv' 		{Out_Csv}
 			'Html' 		{Out_Html}
 		}
  <#   }
